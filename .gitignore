@@ -41,7 +41,6 @@ desktop.ini
 Dataset.zip
 
 # Deep learning model files
-*.pth
 *.pt
 *.h5
 *.keras

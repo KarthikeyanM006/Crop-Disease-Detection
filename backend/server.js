@@ -29,7 +29,7 @@ app.post("/predict", upload.single("image"), (req, res) => {
     }
 
     const imgPath = req.file.path;
-    const scriptPath = path.join(__dirname, "..", "model", "predict.py");
+    const scriptPath = path.join(__dirname, "model", "predict.py");
 
     // Linux uses python3 instead of Windows "py"
     const cmd = `python3 "${scriptPath}" "${imgPath}"`;
