@@ -10,48 +10,73 @@ function App() {
 
   const handleImage = (e) => {
     const file = e.target.files[0];
+
+    if (!file) return;
+
     setImage(file);
     setPreview(URL.createObjectURL(file));
     setResult(null);
   };
 
   const predictImage = async () => {
-    if (!image) return alert("Please choose image");
+    if (!image) {
+      alert("Please choose an image");
+      return;
+    }
 
     const formData = new FormData();
     formData.append("image", image);
 
     setLoading(true);
+    setResult(null);
 
     try {
       const res = await axios.post(
-        "https://crop-disease-detection-p2pe.onrender.com",
+        "https://crop-disease-detection-p2pe.onrender.com/predict",
         formData
       );
 
       setResult(res.data);
     } catch (error) {
-      alert("Prediction failed");
-    }
+      console.error("Prediction Error:", error);
 
-    setLoading(false);
+      if (error.response) {
+        alert(
+          `Prediction failed: ${error.response.data?.error || error.response.statusText}`
+        );
+      } else {
+        alert("Prediction failed. Please check the backend server.");
+      }
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
     <div className="main">
-
       <div className="card">
-
         <h1>🌿 Crop Disease Detection</h1>
+
         <p>AI Based Smart Farming Solution</p>
 
-        <input type="file" onChange={handleImage} />
+        <input
+          type="file"
+          accept="image/*"
+          onChange={handleImage}
+        />
 
         {preview && (
-          <img src={preview} alt="preview" className="preview" />
+          <img
+            src={preview}
+            alt="Crop preview"
+            className="preview"
+          />
         )}
 
-        <button onClick={predictImage}>
+        <button
+          onClick={predictImage}
+          disabled={loading}
+        >
           {loading ? "Predicting..." : "Predict"}
         </button>
 
@@ -61,9 +86,7 @@ function App() {
             <h3>{result.confidence}% Confidence</h3>
           </div>
         )}
-
       </div>
-
     </div>
   );
 }

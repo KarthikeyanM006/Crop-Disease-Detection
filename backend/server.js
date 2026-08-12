@@ -5,16 +5,34 @@ const { exec } = require("child_process");
 const path = require("path");
 
 const app = express();
+
 app.use(cors());
+app.use(express.json());
 
 const upload = multer({ dest: "uploads/" });
 
+// Health check
+app.get("/", (req, res) => {
+    res.json({
+        status: "success",
+        message: "Crop Disease Detection API is running"
+    });
+});
+
+// Prediction endpoint
 app.post("/predict", upload.single("image"), (req, res) => {
+
+    if (!req.file) {
+        return res.status(400).json({
+            error: "No image uploaded"
+        });
+    }
 
     const imgPath = req.file.path;
     const scriptPath = path.join(__dirname, "..", "model", "predict.py");
 
-    const cmd = `py "${scriptPath}" "${imgPath}"`;
+    // Linux uses python3 instead of Windows "py"
+    const cmd = `python3 "${scriptPath}" "${imgPath}"`;
 
     console.log("Running:", cmd);
 
@@ -25,7 +43,10 @@ app.post("/predict", upload.single("image"), (req, res) => {
 
         if (error) {
             console.log("EXEC ERROR:", error);
-            return res.status(500).send(stderr || error.message);
+
+            return res.status(500).json({
+                error: stderr || error.message
+            });
         }
 
         try {
@@ -33,7 +54,11 @@ app.post("/predict", upload.single("image"), (req, res) => {
             res.json(result);
         } catch (e) {
             console.log("JSON Parse Error:", e);
-            res.status(500).send(stdout);
+
+            res.status(500).json({
+                error: "Invalid prediction response",
+                output: stdout
+            });
         }
     });
 });
