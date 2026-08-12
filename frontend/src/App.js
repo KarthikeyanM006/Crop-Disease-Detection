@@ -25,7 +25,7 @@ function App() {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/predict",
+        "https://crop-disease-detection-p2pe.onrender.com",
         formData
       );
 
