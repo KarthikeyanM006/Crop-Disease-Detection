@@ -1,0 +1,94 @@
+Using Device: cuda
+Total Classes: 34
+Downloading: "https://download.pytorch.org/models/densenet121-a639ec97.pth" to /root/.cache/torch/hub/checkpoints/densenet121-a639ec97.pth
+100%|██████████| 30.8M/30.8M [00:00<00:00, 151MB/s]
+/tmp/ipykernel_8955/732650489.py:85: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler()
+🚀 Training Started
+  0%|          | 0/737 [00:00<?, ?it/s]/tmp/ipykernel_8955/732650489.py:109: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+Epoch 1/12: 100%|██████████| 737/737 [06:59<00:00,  1.76it/s, acc=77.58%]
+
+✅ Epoch 1
+Train Acc : 77.58%
+Val Acc   : 86.19%
+Loss      : 967.542
+🔥 Best Model Saved
+Epoch 2/12: 100%|██████████| 737/737 [06:57<00:00,  1.76it/s, acc=87.15%]
+
+✅ Epoch 2
+Train Acc : 87.15%
+Val Acc   : 89.03%
+Loss      : 757.532
+🔥 Best Model Saved
+Epoch 3/12: 100%|██████████| 737/737 [06:49<00:00,  1.80it/s, acc=89.84%]
+
+✅ Epoch 3
+Train Acc : 89.84%
+Val Acc   : 89.49%
+Loss      : 704.666
+🔥 Best Model Saved
+Epoch 4/12: 100%|██████████| 737/737 [06:57<00:00,  1.77it/s, acc=91.67%]
+
+✅ Epoch 4
+Train Acc : 91.67%
+Val Acc   : 90.86%
+Loss      : 670.982
+🔥 Best Model Saved
+Epoch 5/12: 100%|██████████| 737/737 [06:54<00:00,  1.78it/s, acc=92.64%]
+
+✅ Epoch 5
+Train Acc : 92.64%
+Val Acc   : 91.48%
+Loss      : 649.499
+🔥 Best Model Saved
+Epoch 6/12: 100%|██████████| 737/737 [06:58<00:00,  1.76it/s, acc=93.27%]
+
+✅ Epoch 6
+Train Acc : 93.27%
+Val Acc   : 90.99%
+Loss      : 632.375
+Epoch 7/12: 100%|██████████| 737/737 [06:57<00:00,  1.77it/s, acc=94.20%]
+
+✅ Epoch 7
+Train Acc : 94.20%
+Val Acc   : 91.68%
+Loss      : 616.796
+🔥 Best Model Saved
+Epoch 8/12: 100%|██████████| 737/737 [06:55<00:00,  1.77it/s, acc=94.28%]
+
+✅ Epoch 8
+Train Acc : 94.28%
+Val Acc   : 91.08%
+Loss      : 612.485
+Epoch 9/12: 100%|██████████| 737/737 [06:56<00:00,  1.77it/s, acc=95.14%]
+
+✅ Epoch 9
+Train Acc : 95.14%
+Val Acc   : 91.81%
+Loss      : 597.117
+🔥 Best Model Saved
+Epoch 10/12: 100%|██████████| 737/737 [06:54<00:00,  1.78it/s, acc=95.54%]
+
+✅ Epoch 10
+Train Acc : 95.54%
+Val Acc   : 92.33%
+Loss      : 590.022
+🔥 Best Model Saved
+Epoch 11/12: 100%|██████████| 737/737 [06:52<00:00,  1.79it/s, acc=95.77%]
+
+✅ Epoch 11
+Train Acc : 95.77%
+Val Acc   : 90.72%
+Loss      : 583.999
+Epoch 12/12: 100%|██████████| 737/737 [06:54<00:00,  1.78it/s, acc=96.09%]
+
+✅ Epoch 12
+Train Acc : 96.09%
+Val Acc   : 92.21%
+Loss      : 577.577
+
+🎯 Best Validation Accuracy: 92.33455007141724
+✅ Files Saved:
+/content/best_densenet121.pth
+/content/classes.json

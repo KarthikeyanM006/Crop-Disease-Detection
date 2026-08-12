@@ -1,0 +1,95 @@
+Using Device: cuda
+Total Classes: 34
+Downloading: "https://download.pytorch.org/models/efficientnet_b3_rwightman-b3899882.pth" to /root/.cache/torch/hub/checkpoints/efficientnet_b3_rwightman-b3899882.pth
+100%|██████████| 47.2M/47.2M [00:00<00:00, 173MB/s]
+/tmp/ipykernel_3569/1077050954.py:106: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler()
+🚀 Training Started
+  0%|          | 0/737 [00:00<?, ?it/s]/tmp/ipykernel_3569/1077050954.py:132: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+Epoch 1/12: 100%|██████████| 737/737 [10:37<00:00,  1.16it/s, acc=75.94%]
+
+✅ Epoch 1
+Train Acc : 75.94%
+Val Acc   : 88.46%
+Loss      : 1009.091
+🔥 Best Model Saved
+Epoch 2/12: 100%|██████████| 737/737 [10:45<00:00,  1.14it/s, acc=89.54%]
+
+✅ Epoch 2
+Train Acc : 89.54%
+Val Acc   : 92.37%
+Loss      : 711.541
+🔥 Best Model Saved
+Epoch 3/12: 100%|██████████| 737/737 [10:38<00:00,  1.15it/s, acc=92.40%]
+
+✅ Epoch 3
+Train Acc : 92.40%
+Val Acc   : 92.75%
+Loss      : 653.008
+🔥 Best Model Saved
+Epoch 4/12: 100%|██████████| 737/737 [10:34<00:00,  1.16it/s, acc=94.14%]
+
+✅ Epoch 4
+Train Acc : 94.14%
+Val Acc   : 92.89%
+Loss      : 618.071
+🔥 Best Model Saved
+Epoch 5/12: 100%|██████████| 737/737 [10:29<00:00,  1.17it/s, acc=94.93%]
+
+✅ Epoch 5
+Train Acc : 94.93%
+Val Acc   : 93.48%
+Loss      : 600.057
+🔥 Best Model Saved
+Epoch 6/12: 100%|██████████| 737/737 [10:31<00:00,  1.17it/s, acc=95.48%]
+
+✅ Epoch 6
+Train Acc : 95.48%
+Val Acc   : 93.48%
+Loss      : 587.881
+Epoch 7/12: 100%|██████████| 737/737 [10:37<00:00,  1.16it/s, acc=96.10%]
+
+✅ Epoch 7
+Train Acc : 96.10%
+Val Acc   : 93.73%
+Loss      : 574.969
+🔥 Best Model Saved
+Epoch 8/12: 100%|██████████| 737/737 [10:43<00:00,  1.15it/s, acc=96.61%]
+
+✅ Epoch 8
+Train Acc : 96.61%
+Val Acc   : 93.60%
+Loss      : 563.733
+Epoch 9/12: 100%|██████████| 737/737 [10:41<00:00,  1.15it/s, acc=96.66%]
+
+✅ Epoch 9
+Train Acc : 96.66%
+Val Acc   : 94.16%
+Loss      : 561.639
+🔥 Best Model Saved
+Epoch 10/12: 100%|██████████| 737/737 [10:36<00:00,  1.16it/s, acc=96.97%]
+
+✅ Epoch 10
+Train Acc : 96.97%
+Val Acc   : 94.25%
+Loss      : 556.847
+🔥 Best Model Saved
+Epoch 11/12: 100%|██████████| 737/737 [10:36<00:00,  1.16it/s, acc=97.30%]
+
+✅ Epoch 11
+Train Acc : 97.30%
+Val Acc   : 94.46%
+Loss      : 549.505
+🔥 Best Model Saved
+Epoch 12/12: 100%|██████████| 737/737 [10:30<00:00,  1.17it/s, acc=97.31%]
+
+✅ Epoch 12
+Train Acc : 97.31%
+Val Acc   : 94.05%
+Loss      : 547.773
+
+🎯 Best Validation Accuracy: 94.46119663545468
+✅ Files Saved:
+/content/best_efficientnet_b3.pth
+/content/classes.json

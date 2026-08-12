@@ -1,0 +1,94 @@
+Using Device: cuda
+Total Classes: 34
+Downloading: "https://download.pytorch.org/models/mobilenet_v3_large-5c1a4163.pth" to /root/.cache/torch/hub/checkpoints/mobilenet_v3_large-5c1a4163.pth
+100%|██████████| 21.1M/21.1M [00:00<00:00, 202MB/s]
+/tmp/ipykernel_769/2881904739.py:142: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler()
+🚀 Training Started
+  0%|          | 0/737 [00:00<?, ?it/s]/tmp/ipykernel_769/2881904739.py:169: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+Epoch 1/12: 100%|██████████| 737/737 [07:02<00:00,  1.75it/s, acc=79.54%]
+
+✅ Epoch 1
+Train Accuracy : 79.54%
+Validation Acc : 85.21%
+Loss           : 929.529
+🔥 Best Model Saved
+Epoch 2/12: 100%|██████████| 737/737 [06:45<00:00,  1.82it/s, acc=89.08%]
+
+✅ Epoch 2
+Train Accuracy : 89.08%
+Validation Acc : 87.84%
+Loss           : 719.871
+🔥 Best Model Saved
+Epoch 3/12: 100%|██████████| 737/737 [06:45<00:00,  1.82it/s, acc=91.56%]
+
+✅ Epoch 3
+Train Accuracy : 91.56%
+Validation Acc : 90.16%
+Loss           : 669.028
+🔥 Best Model Saved
+Epoch 4/12: 100%|██████████| 737/737 [06:48<00:00,  1.80it/s, acc=93.15%]
+
+✅ Epoch 4
+Train Accuracy : 93.15%
+Validation Acc : 90.83%
+Loss           : 637.797
+🔥 Best Model Saved
+Epoch 5/12: 100%|██████████| 737/737 [06:48<00:00,  1.80it/s, acc=93.69%]
+
+✅ Epoch 5
+Train Accuracy : 93.69%
+Validation Acc : 89.94%
+Loss           : 623.285
+Epoch 6/12: 100%|██████████| 737/737 [06:46<00:00,  1.81it/s, acc=94.81%]
+
+✅ Epoch 6
+Train Accuracy : 94.81%
+Validation Acc : 91.56%
+Loss           : 601.812
+🔥 Best Model Saved
+Epoch 7/12: 100%|██████████| 737/737 [06:46<00:00,  1.81it/s, acc=95.22%]
+
+✅ Epoch 7
+Train Accuracy : 95.22%
+Validation Acc : 90.68%
+Loss           : 590.297
+Epoch 8/12: 100%|██████████| 737/737 [06:40<00:00,  1.84it/s, acc=95.50%]
+
+✅ Epoch 8
+Train Accuracy : 95.50%
+Validation Acc : 90.38%
+Loss           : 585.142
+Epoch 9/12: 100%|██████████| 737/737 [06:43<00:00,  1.82it/s, acc=95.80%]
+
+✅ Epoch 9
+Train Accuracy : 95.80%
+Validation Acc : 92.03%
+Loss           : 577.187
+🔥 Best Model Saved
+Epoch 10/12: 100%|██████████| 737/737 [06:44<00:00,  1.82it/s, acc=96.26%]
+
+✅ Epoch 10
+Train Accuracy : 96.26%
+Validation Acc : 91.14%
+Loss           : 567.948
+Epoch 11/12: 100%|██████████| 737/737 [06:48<00:00,  1.81it/s, acc=96.46%]
+
+✅ Epoch 11
+Train Accuracy : 96.46%
+Validation Acc : 91.75%
+Loss           : 563.348
+Epoch 12/12: 100%|██████████| 737/737 [06:41<00:00,  1.83it/s, acc=96.85%]
+
+✅ Epoch 12
+Train Accuracy : 96.85%
+Validation Acc : 92.21%
+Loss           : 557.245
+🔥 Best Model Saved
+
+🎯 Best Validation Accuracy: 92.20758609744485
+
+✅ Files Saved:
+/content/best_mobilenetv3.pth
+/content/classes.json
